@@ -50,12 +50,27 @@ for details.
         <!-- TODO: replace with your productID/vendorID -->
         <string>{"ProductID":0x024F,"VendorID":0x05AC}</string>
         <string>--set</string>
-        <!-- TODO: this maps ESC to backtick - replace with the mappings of your choice -->
+        <!--
+          Map ESC to backtick, caps to left-ctrl, and left-ctrl to caps.
+          See https://developer.apple.com/library/archive/technotes/tn2450/_index.html#//apple_ref/doc/uid/DTS40017618-CH1-TNTAG8
+          ESC = 0x29
+          backtick = 0x35
+          left-ctrl = 0xe0
+          caps = 0x39
+        -->
         <string>{"UserKeyMapping":[
           {
             "HIDKeyboardModifierMappingSrc": 0x700000029,
             "HIDKeyboardModifierMappingDst": 0x700000035
-         }
+          },
+          {
+            "HIDKeyboardModifierMappingSrc": 0x7000000e0,
+            "HIDKeyboardModifierMappingDst": 0x700000039
+          },
+          {
+            "HIDKeyboardModifierMappingSrc": 0x700000039,
+            "HIDKeyboardModifierMappingDst": 0x7000000e0
+          },
         ]}</string>
     </array>
     <key>RunAtLoad</key>
