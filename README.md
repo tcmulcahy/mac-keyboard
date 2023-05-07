@@ -51,7 +51,7 @@ for details.
         <string>{"ProductID":0x024F,"VendorID":0x05AC}</string>
         <string>--set</string>
         <!--
-          Map ESC to backtick, caps to left-ctrl, and left-ctrl to caps.
+          Swap ESC with backtick, and swap caps with left-ctrl.
           See https://developer.apple.com/library/archive/technotes/tn2450/_index.html#//apple_ref/doc/uid/DTS40017618-CH1-TNTAG8
           ESC = 0x29
           backtick = 0x35
@@ -62,6 +62,10 @@ for details.
           {
             "HIDKeyboardModifierMappingSrc": 0x700000029,
             "HIDKeyboardModifierMappingDst": 0x700000035
+          },
+          {
+            "HIDKeyboardModifierMappingSrc": 0x700000035,
+            "HIDKeyboardModifierMappingDst": 0x700000029
           },
           {
             "HIDKeyboardModifierMappingSrc": 0x7000000e0,
